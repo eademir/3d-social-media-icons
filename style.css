@@ -21,6 +21,37 @@ ul li{
     position: relative;
     margin: 0 2px;
 }
+ul li:after{
+    content:'';
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    transition: .5s;
+    opacity: 0;
+    filter: blur(2px);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+}
+ul li:hover:after{
+    opacity: 1;
+    -webkit-transition-delay: .1s;
+    -moz-transition-delay: .1s;
+    -ms-transition-delay: .1s;
+    -o-transition-delay: .1s;
+    transition-delay: .1s;
+    -webkit-transform: sclae(1);
+    -moz-transform: sclae(1);
+    -ms-transform: sclae(1);
+    -o-transform: sclae(1);
+    transform: sclae(1);
+}
 ul li a{
     width: 40px;
     height: 40px;
@@ -33,12 +64,19 @@ ul li a{
     background: #ccc;
 
 }
+ul li:hover a{
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
 ul li a span{
     width: 100%;
     height: 100%;
 }
 ul li a span:before{
-    font-family: "Font Awesome 5 Free";
+    font-family: "Font Awesome 5 Brands";
     text-align: center;
     line-height: 40px;
     position: absolute;
@@ -63,7 +101,7 @@ ul li:hover a span:before{
     transform: rotateX(90deg) translateY(-50%);
 }
 ul li a span:after{
-    font-family: "Font Awesome 5 Free";
+    font-family: "Font Awesome 5 Brands";
     text-align: center;
     line-height: 40px;
     position: absolute;
@@ -71,19 +109,18 @@ ul li a span:after{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fff;
-    color: #262626;
+    color: #fff;
     transform-origin: top;
     -webkit-transition: transform .5s;
     -moz-transition: transform .5s;
     -ms-transition: transform .5s;
     -o-transition: transform .5s;
     transition: transform .5s;
-    -webkit-transform: rotateX(90deg) translateY(50%);
-    -moz-transform: rotateX(90deg) translateY(50%);
-    -ms-transform: rotateX(90deg) translateY(50%);
-    -o-transform: rotateX(90deg) translateY(50%);
-    transform: rotateX(90deg) translateY(50%);
+    -webkit-transform: rotateX(90deg) translateY(-50%);
+    -moz-transform: rotateX(90deg) translateY(-50%);
+    -ms-transform: rotateX(90deg) translateY(-50%);
+    -o-transform: rotateX(90deg) translateY(-50%);
+    transform: rotateX(90deg) translateY(-50%);
 }
 ul li:hover a span:after{
     -webkit-transform: rotateX(0) translateY(0);
@@ -92,6 +129,33 @@ ul li:hover a span:after{
     -o-transform: rotateX(0) translateY(0);
     transform: rotateX(0) translateY(0);
 }
-ul li a span:after, ul li a span:before{
+ul li:nth-child(1) a span:after, ul li:nth-child(1) a span:before{
     content:"\f39e";
+}
+ul li:nth-child(2) a span:after, ul li:nth-child(2) a span:before{
+    content:"\f099";
+}
+ul li:nth-child(3) a span:after, ul li:nth-child(3) a span:before{
+    content:"\f0e1";
+}
+ul li:nth-child(4) a span:after, ul li:nth-child(4) a span:before{
+    content:"\f0d5";
+}
+ul li:nth-child(5) a span:after, ul li:nth-child(5) a span:before{
+    content:"\f16d";
+}
+ul li:nth-child(1) a span:after{
+    background: #3b5998;
+}
+ul li:nth-child(2) a span:after{
+    background: #55acee;
+}
+ul li:nth-child(3) a span:after{
+    background: #0077b5;
+}
+ul li:nth-child(4) a span:after{
+    background: #dc4e41;
+}
+ul li:nth-child(5) a span:after{
+    background: #517fa4;
 }
